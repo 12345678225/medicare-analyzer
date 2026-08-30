@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Symptom Explorer | MediCare Smart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="prediction">
+    <nav class="app-nav"><a class="brand" href="home.html"><span class="brand-mark">+</span>MediCare Smart</a><button
+            class="menu-btn">☰</button>
+        <div class="nav-links"><a data-nav="home" href="home.html">Home</a><a data-nav="dashboard"
+                href="dashboard.html">Dashboard</a><a data-nav="prediction"
+                href="disease-prediction.html">Prediction</a><a data-nav="appointments"
+                href="appointments.html">Appointments</a><a data-nav="reminders"
+                href="medicine-reminder.html">Medicines</a><a data-nav="reports"
+                href="medicine-reports.html">Reports</a><span class="profile-chip"><span
+                    class="avatar">AM</span><span>Aarav</span><a href="login.html" id="logout">↪</a></span></div>
+    </nav>
+    <main class="page">
+        <div class="eyebrow">Decision support</div>
+        <h1 class="page-title">Symptom explorer</h1>
+        <p class="lead">Share a few details to explore general health patterns. This tool is designed to help you
+            prepare for a conversation with a clinician.</p>
+        <div class="notice" style="margin:25px 0">This feature is educational and does not provide a medical diagnosis.
+            Always consult a qualified healthcare professional about symptoms, treatment, or urgent concerns.</div>
+        <div class="grid grid-2">
+            <form class="card stack" id="prediction-form">
+                <div class="form-grid">
+                    <div class="field"><label for="patient">Patient name</label><input id="patient" name="patient"
+                            placeholder="Aarav Mehta"></div>
+                    <div class="field"><label for="age">Age</label><input id="age" name="age" type="number" min="1"
+                            max="120" placeholder="28"></div>
+                    <div class="field"><label for="gender">Gender</label><select id="gender" name="gender">
+                            <option value="">Select</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                            <option>Non-binary</option>
+                            <option>Prefer not to say</option>
+                        </select></div>
+                </div>
+                <div class="field"><label for="symptom-search">Search symptoms</label><input class="search"
+                        id="symptom-search" placeholder="e.g. headache, fatigue"></div>
+                <div class="field"><label>What are you experiencing?</label>
+                    <div class="grid grid-2"><label class="check"><input type="checkbox" name="symptom"
+                                value="headache"> Headache</label><label class="check"><input type="checkbox"
+                                name="symptom" value="fatigue"> Fatigue</label><label class="check"><input
+                                type="checkbox" name="symptom" value="fever"> Fever</label><label class="check"><input
+                                type="checkbox" name="symptom" value="thirst"> Increased thirst</label><label
+                            class="check"><input type="checkbox" name="symptom" value="cough"> Cough</label><label
+                            class="check"><input type="checkbox" name="symptom" value="nausea"> Nausea</label></div>
+                </div><button class="btn" type="submit">Explore patterns <span>✧</span></button>
+            </form>
+            <div class="card hidden" id="prediction-result">
+                <div class="eyebrow">Your result</div>
+            </div>
+        </div>

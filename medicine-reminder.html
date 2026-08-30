@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Medicine Reminder | MediCare Smart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="reminders">
+    <nav class="app-nav"><a class="brand" href="home.html"><span class="brand-mark">+</span>MediCare Smart</a><button
+            class="menu-btn">☰</button>
+        <div class="nav-links"><a data-nav="home" href="home.html">Home</a><a data-nav="dashboard"
+                href="dashboard.html">Dashboard</a><a data-nav="prediction"
+                href="disease-prediction.html">Prediction</a><a data-nav="appointments"
+                href="appointments.html">Appointments</a><a data-nav="reminders"
+                href="medicine-reminder.html">Medicines</a><a data-nav="reports"
+                href="medicine-reports.html">Reports</a><span class="profile-chip"><span
+                    class="avatar">AM</span><span>Aarav</span><a href="login.html" id="logout">↪</a></span></div>
+    </nav>
+    <main class="page">
+        <div class="eyebrow">Daily routine</div>
+        <h1 class="page-title">Medicine reminders</h1>
+        <p class="lead">A simple, visible rhythm for the medicines that support your health.</p>
+        <div class="grid grid-2" style="align-items:start">
+            <form class="card stack" id="medicine-form">
+                <h2 style="margin:0">Add a medicine</h2>
+                <div class="form-grid">
+                    <div class="field"><label for="name">Medicine name</label><input id="name" name="name"
+                            placeholder="e.g. Vitamin D3"></div>
+                    <div class="field"><label for="dose">Dosage</label><input id="dose" name="dose"
+                            placeholder="e.g. 1000 IU"></div>
+                    <div class="field"><label for="frequency">Frequency</label><select id="frequency" name="frequency">
+                            <option>Once daily</option>
+                            <option>Twice daily</option>
+                            <option>As needed</option>
+                        </select></div>
+                    <div class="field"><label for="time">Reminder time</label><input id="time" name="time" type="time">
+                    </div>
+                    <div class="field"><label for="start">Start date</label><input id="start" name="start" type="date">
+                    </div>
+                    <div class="field"><label for="end">End date</label><input id="end" name="end" type="date"></div>
+                </div><button class="btn" type="submit">Add medicine <span>+</span></button>
+            </form>
+            <div>
+                <div class="section-head" style="margin-top:0">
+                    <h2>Today's schedule</h2><span class="badge">Live</span>
+                </div>
+                <div class="card" id="reminder-list"></div>
+            </div>
+        </div>
+        <div class="section-head">
+            <h2>Reminder habits</h2>
+        </div>
+        <section class="grid grid-3">
+            <div class="card">
+                <div class="kicker">Taken this week</div>
+                <div class="stat-value">12 / 14</div><span class="muted">86% consistency</span>
+            </div>
+            <div class="card">
+                <div class="kicker">Next dose</div>
+                <div class="stat-value">20:00</div><span class="muted">Metformin · 500 mg</span>
+            </div>
+            <div class="card">
+                <div class="kicker">Upcoming</div>
+                <div class="stat-value">1</div><span class="muted">Active routine</span>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

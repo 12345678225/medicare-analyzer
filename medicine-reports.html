@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Medicine Reports | MediCare Smart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @media print {
+
+            .app-nav,
+            .toolbar,
+            .section-head .btn,
+            .footer {
+                display: none !important
+            }
+
+            .page {
+                padding: 0
+            }
+
+            .card {
+                box-shadow: none
+            }
+        }
+    </style>
+</head>
+
+<body data-page="reports">
+    <nav class="app-nav"><a class="brand" href="home.html"><span class="brand-mark">+</span>MediCare Smart</a><button
+            class="menu-btn">☰</button>
+        <div class="nav-links"><a data-nav="home" href="home.html">Home</a><a data-nav="dashboard"
+                href="dashboard.html">Dashboard</a><a data-nav="prediction"
+                href="disease-prediction.html">Prediction</a><a data-nav="appointments"
+                href="appointments.html">Appointments</a><a data-nav="reminders"
+                href="medicine-reminder.html">Medicines</a><a data-nav="reports"
+                href="medicine-reports.html">Reports</a><span class="profile-chip"><span
+                    class="avatar">AM</span><span>Aarav</span><a href="login.html" id="logout">↪</a></span></div>
+    </nav>
+    <main class="page">
+        <div class="eyebrow">Health history</div>
+        <h1 class="page-title">Medicine reports</h1>
+        <p class="lead">A clear record of your medicine routine, ready to review or print for your next visit.</p>
+        <div class="grid grid-3" style="margin-top:28px">
+            <div class="card">
+                <div class="kicker">This week</div>
+                <div class="stat-value">86%</div><span class="muted">Taken on schedule</span>
+            </div>
+            <div class="card">
+                <div class="kicker">Doses taken</div>
+                <div class="stat-value">12</div><span class="muted">Across 2 medicines</span>
+            </div>
+            <div class="card">
+                <div class="kicker">Missed doses</div>
+                <div class="stat-value">2</div><span class="muted">Worth discussing</span>
+            </div>
+        </div>
+        <div class="section-head">
+            <h2>Medicine history</h2>
+            <div><button class="btn secondary small" id="generate-report">↻ Refresh</button> <button class="btn small"
+                    id="print-report">⤓ Print report</button></div>
+        </div>
+        <div class="toolbar"><input class="search" data-filter placeholder="Search medicine history"><select
+                class="search">
+                <option>All statuses</option>
+                <option>Taken</option>
+                <option>Missed</option>
+            </select></div>
+        <div class="card table-wrap">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Dosage</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="report-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

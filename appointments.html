@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Appointments | MediCare Smart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="appointments">
+    <nav class="app-nav"><a class="brand" href="home.html"><span class="brand-mark">+</span>MediCare Smart</a><button
+            class="menu-btn">☰</button>
+        <div class="nav-links"><a data-nav="home" href="home.html">Home</a><a data-nav="dashboard"
+                href="dashboard.html">Dashboard</a><a data-nav="prediction"
+                href="disease-prediction.html">Prediction</a><a data-nav="appointments"
+                href="appointments.html">Appointments</a><a data-nav="reminders"
+                href="medicine-reminder.html">Medicines</a><a data-nav="reports"
+                href="medicine-reports.html">Reports</a><span class="profile-chip"><span
+                    class="avatar">AM</span><span>Aarav</span><a href="login.html" id="logout">↪</a></span></div>
+        </div>
+    </nav>
+    <main class="page">
+        <div class="eyebrow">Care network</div>
+        <h1 class="page-title">Find your next appointment</h1>
+        <p class="lead">Browse trusted specialists and choose a time that fits your week.</p>
+        <div class="toolbar"><input class="search" data-filter placeholder="Search doctors or specialties"><select
+                class="search">
+                <option>All specialties</option>
+                <option>Cardiologist</option>
+                <option>Dermatologist</option>
+                <option>General Physician</option>
+                <option>Dentist</option>
+                <option>Neurologist</option>
+            </select></div>
+        <section class="grid grid-3">
+            <article class="card doctor-card" data-searchable>
+                <div class="doctor-avatar">👩🏻‍⚕️</div>
+                <div>
+                    <h3>Dr. Aswini</h3>
+                    <p class="muted" style="font-size:13px">Dentist · 6 years experience</p>
+                </div>
+                <div class="row"><span class="badge">fri, saturday</span><span class="muted" style="font-size:12px">From
+                        10:30</span></div><button class="btn small book-doctor" data-doctor="Dr. Aswini">Book
+                    appointment</button>
+            </article>
+            <article class="card doctor-card" data-searchable>
+                <div class="doctor-avatar">👩🏻‍⚕️</div>
+                <div>
+                    <h3>Dr. Ranjani</h3>
+                    <p class="muted" style="font-size:13px">Cardiologist · 3 years experience</p>
+                </div>
+                <div class="row"><span class="badge">Tue, Thu</span><span class="muted" style="font-size:12px">From
+                        10:30</span></div><button class="btn small book-doctor" data-doctor="Dr. Ranjani">Book
+                    appointment</button>
+            </article>
+            <article class="card doctor-card" data-searchable>
+                <div class="doctor-avatar" style="background:#fce5d9">👨🏽‍⚕️</div>
+                <div>
+                    <h3>Dr. Vetriselvan</h3>
+                    <p class="muted" style="font-size:13px">Dermatologist · 5 years experience</p>
+                </div>
+                <div class="row"><span class="badge">Mon, Wed</span><span class="muted" style="font-size:12px">From
+                        09:00</span></div><button class="btn small book-doctor" data-doctor="Dr. Vetriselvan">Book
+                    appointment</button>
+            </article>
+            <article class="card doctor-card" data-searchable>
+                <div class="doctor-avatar" style="background:#fce5d9">👨🏽‍⚕️</div>
+                <div>
+                    <h3>Dr. bharath</h3>
+                    <p class="muted" style="font-size:13px">Neurologist · 7 years experience</p>
+                </div>
+                <div class="row"><span class="badge">Mon,Fri</span><span class="muted" style="font-size:12px">From
+                        09:00</span></div><button class="btn small book-doctor" data-doctor="Dr. bharath">Book
+                    appointment</button>
+            </article>
+            <article class="card doctor-card" data-searchable>
+                <div class="doctor-avatar" style="background:#e9e6fa">👩🏾‍⚕️</div>
+                <div>
+                    <h3>Dr. abinaya</h3>
+                    <p class="muted" style="font-size:13px">General Physician · 5 years</p>
+                </div>
+                <div class="row"><span class="badge">Daily</span><span class="muted" style="font-size:12px">From
+                        11:00</span></div><button class="btn small book-doctor" data-doctor="Dr. abinaya">Book
+                    appointment</button>
+            </article>
+        </section>
+        <div class="section-head">
+            <h2>Book an appointment</h2>
+        </div>
+        <form class="card form-grid" id="appointment-form">
+            <div class="field"><label for="doctor">Doctor</label><input id="doctor" name="doctor"
+                    placeholder="Select a doctor above"></div>
+            <div class="field"><label for="speciality">Specialization</label><select id="speciality" name="speciality">
+                    <option>General Physician</option>
+                    <option>Cardiologist</option>
+                    <option>Dermatologist</option>
+                    <option>Dentist</option>
+                    <option>Neurologist</option>
+                </select></div>
+            <div class="field"><label for="patient">Patient name</label><input id="patient" name="patient"
+                    placeholder="Aarav Mehta"></div>
+            <div class="field"><label for="date">Appointment date</label><input id="date" name="date" type="date"></div>
+            <div class="field"><label for="time">Appointment time</label><input id="time" name="time" type="time"></div>
+            <div class="full"><button class="btn" type="submit">Confirm appointment</button></div>
+        </form>
+        <div class="section-head">
+            <h2>My appointments</h2>
+        </div>
+        <div class="card" id="my-appointments"></div>
+    </main>
+    <script>document.addEventListener('DOMContentLoaded', () => document.querySelectorAll('.book-doctor').forEach(b => b.onclick = () => document.querySelector('#doctor').value = b.dataset.doctor));</script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

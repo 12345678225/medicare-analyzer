@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dashboard | MediCare Smart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="dashboard">
+    <nav class="app-nav"><a class="brand" href="home.html"><span class="brand-mark">+</span>MediCare Smart</a><button
+            class="menu-btn">☰</button>
+        <div class="nav-links"><a data-nav="home" href="home.html">Home</a><a data-nav="dashboard"
+                href="dashboard.html">Dashboard</a><a data-nav="prediction"
+                href="disease-prediction.html">Prediction</a><a data-nav="appointments"
+                href="appointments.html">Appointments</a><a data-nav="reminders"
+                href="medicine-reminder.html">Medicines</a><a data-nav="reports"
+                href="medicine-reports.html">Reports</a><span class="profile-chip"><span
+                    class="avatar">AM</span><span>bhathur</span><a href="login.html" id="logout">↪</a></span></div>
+    </nav>
+    <main class="page">
+        <div class="dashboard-layout">
+            <aside class="sidebar"><small>Workspace</small><a class="active" href="dashboard.html">▦ Overview</a><a
+                    href="medicine-reminder.html">◷ Medicines</a><a href="appointments.html">⌁ Appointments</a><a
+                    href="disease-prediction.html">✧ Predictions</a><a href="medicine-reports.html">▤
+                    Reports</a><small>Account</small><a href="#">⚙ Settings</a><a href="login.html" id="logout">↪ Sign
+                    out</a></aside>
+            <section class="dashboard-main">
+                <div class="eyebrow">Your overview</div>
+                <h1 class="page-title">Good morning, bhathur.</h1>
+                <p class="lead">Here is the calm version of everything that needs your attention today.</p>
+                <div class="grid grid-4" style="margin-top:28px">
+                    <div class="card">
+                        <div class="stat-icon">◷</div>
+                        <div class="stat-value" id="today-count">2</div><span class="muted">Medicine reminders</span>
+                    </div>
+                    <div class="card">
+                        <div class="stat-icon">⌁</div>
+                        <div class="stat-value" id="appointment-count">1</div><span class="muted">Upcoming
+                            appointments</span>
+                    </div>
+                    <div class="card">
+                        <div class="stat-icon">♥</div>
+                        <div class="stat-value">86%</div><span class="muted">Routine consistency</span>
+                    </div>
+                    <div class="card">
+                        <div class="stat-icon">♧</div>
+                        <div class="stat-value">Good</div><span class="muted">Health summary</span>
+                    </div>
+                </div>
+                <div class="section-head">
+                    <h2>Today's medicines</h2><a class="btn secondary small" href="medicine-reminder.html">Manage</a>
+                </div>
+                <div class="card" id="reminder-list"></div>
+                <div class="grid grid-2">
+                    <div>
+                        <div class="section-head">
+                            <h2>Upcoming appointment</h2>
+                        </div>
+                        <div class="card" id="appointments-list"></div>
+                    </div>
+                    <div>
+                        <div class="section-head">
+                            <h2>Recent activity</h2><a href="medicine-reports.html" class="muted"
+                                style="font-size:12px">View all →</a>
+                        </div>
+                        <div class="card stack">
+                            <div class="row"><span><b>Vitamin D3</b><br><small class="muted">Today,
+                                        08:00</small></span><span class="badge">Taken</span></div>
+                            <div class="row"><span><b>Symptom check</b><br><small
+                                        class="muted">Yesterday</small></span><span class="badge blue">Viewed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
